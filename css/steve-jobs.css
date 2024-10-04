@@ -6,6 +6,7 @@
 	font-weight: normal;
 	src: url('../fonts/Stempel-Garamond-W01-Roman.woff') format('woff');
 }
+
 /* 书签部分 */
 .turnjs-bookmark {
 	width: 400px;
@@ -29,15 +30,18 @@
 }
 
 .turnjs-bookmark ul li {
-	margin-bottom: 5px;
+	margin-bottom: 13px;
 	width: 145px;
-
+font-size: 16px;
 }
-.turnjs-bookmark ul li a{
+
+.turnjs-bookmark ul li a {
 	display: block;
 	width: 145px;
-			margin-left: 10px;
+	margin-left: 10px;
+	text-align: center;
 }
+
 .turnjs-bookmark ul li:hover {
 	background: #CAD1EE;
 	-webkit-border-radius: 10px;
@@ -52,7 +56,14 @@
 .turnjs-bookmark ul li:nth-child(9) {
 	font-size: 20px;
 	text-align: center;
-	margin-left: 0;
+	font-weight: 600;
+
+}
+.turnjs-bookmark ul li a:nth-child(1),
+.turnjs-bookmark ul li a:nth-child(3),
+.turnjs-bookmark ul li a:nth-child(9) {
+	margin-left: 0 !important;
+
 }
 /* 书签部分结束 */
 .animated {
@@ -83,6 +94,7 @@
 	width: 960px;
 	height: 600px;
 }
+
 /* 书字体h1 月份*/
 .sj-book h1 {
 	font-family: "Stempel-Garamond-W01-Roman";
@@ -94,6 +106,7 @@
 	-webkit-text-stroke-color: white;
 	-webkit-text-stroke-width: 0.005em;
 }
+
 /* 书字体h2 周*/
 .sj-book h2 {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -149,9 +162,11 @@
 	background-color: yellow;
 	/* 自定义圆点的颜色 */
 }
+
 .sj-book .book-content .Experiment .Experiment_content {
 	margin: 10px 0;
 }
+
 .sj-book .book-content .result {
 	position: relative;
 	margin: 5px 0;
@@ -171,6 +186,7 @@
 	background-color: green;
 	/* 自定义圆点的颜色 */
 }
+
 .sj-book .book-content .Analysis {
 	position: relative;
 	margin: 5px 0;
@@ -190,6 +206,7 @@
 	background-color: rgb(42, 183, 219);
 	/* 自定义圆点的颜色 */
 }
+
 /* 小圆点颜色结束 */
 .sj-book blockquote {
 	color: #586078;
@@ -247,6 +264,7 @@
 	opacity: 0.9;
 	cursor: pointer;
 }
+
 /* 书字体p */
 .sj-book .book-content p {
 	text-indent: 0px;
@@ -264,10 +282,11 @@
 .sj-book .right-pic {
 	float: right;
 	margin-top: 15px;
-		margin-left: 15px;
-		margin-bottom: 15px;
-width: 200px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	width: 200px;
 }
+
 .animated {
 	-webkit-transition: margin-left 0.2s ease-in-out;
 	-moz-transition: margin-left 0.2s ease-in-out;
@@ -329,6 +348,7 @@ width: 200px;
 	background-color: black;
 	background-image: url(../pics/cover3.png) !important;
 }
+
 /* 修改的第9各种古位置+1+2 */
 .sj-book .p63 {
 	background-color: white;
@@ -412,6 +432,7 @@ width: 200px;
 .sj-book .p3 {
 	background-position: -1920px 0 !important;
 }
+
 /* 修改的56个值+1 */
 .sj-book .p63 {
 	background-position: -960px 0 !important;

@@ -1,68 +1,68 @@
+.tabs_container {
+    width: 1300px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
-        .tabs_container {
-            width: 1300px;
-            margin: auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    /* Set a fixed width for better alignment */
+}
 
-        .tabs {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            position: relative;
-            /* Set a fixed width for better alignment */
-        }
+.tabs label {
+    order: 1;
+    display: block;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    background: #d4e9c2;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color ease 0.4s;
+    margin: 0;
+    color: #2f5841;
+}
 
-        .tabs label {
-            order: 1;
-            display: block;
-            padding: 1rem 3rem;
-            cursor: pointer;
-            background: #d4e9c2;
-            font-size: 20px;
-            font-weight: bold;
-            transition: background-color ease 0.4s;
-            margin: 0;
-            color: #2f5841;
-        }
+.tabs label:nth-of-type(1) {
+    border-radius: 40px 0 0 40px;
+}
 
-        .tabs label:nth-of-type(1) {
-            border-radius: 40px 0 0 40px;
-        }
+.tabs label:nth-of-type(2) {
+    border-radius: 0 40px 40px 0;
+}
 
-        .tabs label:nth-of-type(2) {
-            border-radius: 0 40px 40px 0;
-        }
+.tabs .tab {
+    order: 99;
+    position: absolute;
+    top: 60px;
+    /* Adjust this value if needed to position below tabs */
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-        .tabs .tab {
-            order: 99;
-            position: absolute;
-            top: 60px;
-            /* Adjust this value if needed to position below tabs */
-            left: 0;
-            width: 100%;
-            visibility: hidden;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+.tabs input[type="radio"] {
+    display: none;
+}
 
-        .tabs input[type="radio"] {
-            display: none;
-        }
 /* 
         .tabs input[type="radio"]:checked+label {
             background: #38bc4c;
         } */
 
-        .tabs input[type="radio"]:checked+label+.tab {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-            display: block;
-            position: static;
-        }
+.tabs input[type="radio"]:checked+label+.tab {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+    position: static;
+}
 
 .card-slider {
     position: absolute;
@@ -89,143 +89,156 @@
 }
 
 
-        .card-container {
-            /* 100%的窗口高度 */
-            /* 弹性布局 水平+垂直居中 */
-            display: flex;
-            margin: auto;
-            justify-content: center;
-            align-items: center;
-            width: 1200px;
-        }
+.card-container {
+    /* 100%的窗口高度 */
+    /* 弹性布局 水平+垂直居中 */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+}
 
-        .card {
-            flex: 1;
-            /* 相对定位 */
-            position: relative;
-            width: 300px;
-            height: 220px;
-            margin: 40px;
-            background-color: rgb(217, 217, 217);
-            border-radius: 20px;
-            /* 居中 */
-            align-items: center;
-            color: #fff;
-            /* 阴影 */
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-            transition:flex  0.8s ease,background-color 0.8s ease;
+.card {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    flex: 1;
+    -webkit-flex: 1;
+    /* 相对定位 */
+    position: relative;
+    width: 300px;
+    height: 220px;
+    margin: 40px;
+    background-color: rgb(217, 217, 217);
+    border-radius: 20px;
+    /* 居中 */
+    align-items: center;
+    color: #fff;
+    /* 阴影 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: flex 0.8s ease, background-color 0.8s ease;
 
-            &:hover {
-                flex: 2.5;
-            }
+    &:hover {
+        box-flex: 2.5;
+        -webkit-box-flex: 2.5;
+        -moz-box-flex: 2.5;
+        flex: 2.5;
+        -webkit-flex: 2.5;
+    }
 
-        }
+}
 
-        .card .card-text {
-            margin-top: 30px;
-        }
+.card .card-text {
+    margin-top: 30px;
+}
 
-        .card .card-text p {
-            font-size: 30px;
-        }
+.card .card-text p {
+    font-size: 30px;
+}
 
-        .card .photo .photo-1 {
-            /* 保持原有尺寸比例,裁切长边 */
-            object-fit: cover;
-        }
+.card .photo .photo-1 {
+    /* 保持原有尺寸比例,裁切长边 */
+    object-fit: cover;
+}
 
-        /* 默认大图 */
-        .card .photo {
-            /* 绝对定位 */
-            position: absolute;
-            bottom: 0;
-            right: -75px;
-            transition: transform 1s, height 1s;
-            height: 120%;
+/* 默认大图 */
+.card .photo {
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 0px;
+    right: -40px;
+    transition: transform 1s, height 1s;
+    height: 120%;
+}
 
-        }
+.card .photo .photo-1 {
+    height: 100%;
+}
 
-        .card .photo .photo-1 {
-            height: 100%;
-        }
+.card .photo-2 {
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    height: 80%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 20px;
+    overflow: hidden;
+}
 
-        .card .photo-2 {
-            /* 绝对定位 */
-            position: absolute;
-            bottom: 10%;
-            left: 30%;
-            height: 80%;
-            opacity: 0;
-            transition: opacity 0.5s;
-            border-radius: 20px;
-            overflow: hidden;
-        }
+.card-text-2 {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    opacity: 0;
+}
 
-        .card-text-2 {
-            position: absolute;
-            right: 50px;
-            bottom: 50px;
-            opacity: 0;
-        }
+.card:hover {
+    background: #351f0d;
+}
 
-        .card:hover {
-            background: #351f0d;
-        }
+.card:hover .card-text {
+    opacity: 0;
+    transition: opacity 0.5s 0.3s;
+}
 
-        .card:hover .card-text {
-            opacity: 0;
-            transition: opacity 0.5s 0.3s;
-        }
+.card:hover .photo-2 {
+    opacity: 1;
+    transition: opacity 0.5s 0.3s;
+}
 
-        .card:hover .photo-2 {
-            opacity: 1;
-            transition: opacity 0.5s 0.3s;
-        }
+.card:hover .card-text-2 {
+    opacity: 1;
+    transition: opacity 0.5s 0.3s;
+}
 
-        .card:hover .card-text-2 {
-            opacity: 1;
-            transition: opacity 0.5s 0.3s;
-        }
+/* 鼠标移入变小图 */
+.card:hover .photo {
+    transform: translateX(-500px);
+    height: 200px;
+    transition: transform 1s, height 1s;
+}
 
-        /* 鼠标移入变小图 */
-        .card:hover .photo {
-            transform: translateX(-450px);
-            height: 200px;
-            transition: transform 1s, height 1s;
-        }
+.card:hover h1 {
+    top: 170px;
+}
 
-        .card:hover h1 {
-            top: 170px;
-        }
+.card h2 {
+    margin-top: 220px;
+    width: 80%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
 
-        .card h2 {
-            margin-top: 220px;
-            width: 80%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-        }
+.card p {
+    width: 90%;
+    text-indent: 32px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
 
-        .card p {
-            width: 90%;
-            text-indent: 32px;
-            font-size: 16px;
-            margin-bottom: 15px;
-            line-height: 30px;
-        }
+.card a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 32px;
+    border-radius: 8px;
+}
 
-        .card a {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            padding: 8px 32px;
-            border-radius: 8px;
-        }
+.card a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
-        .card a:hover {
-            color: #fff;
-            background-color: rgba(255, 255, 255, 0.2);
-        }
+.LJ {}

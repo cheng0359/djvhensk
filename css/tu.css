@@ -15,7 +15,7 @@ body {
     width: 100%;
     /* border: 5px groove rgba(20, 195, 113, 0.288); */
     box-sizing: content-box;
-    background: #d4e9c2;
+    background: #a4d1cc;
     height: 60px;
     z-index: 9999;
     padding: 10px;
@@ -130,7 +130,7 @@ body {
 
 .dropdown-content {
     display: none;
-    background: #d4e9c2;
+    background: #a4d1cc;
     position: absolute;
     border-radius: 0 0 25px 25px;
     width: 103px;
@@ -225,7 +225,7 @@ body {
 
 .slide2 {
     opacity: 0;
-    background-color: #a9cfa8;
+    background-color: #3a8297;
     z-index: 1;
     /* box-shadow: 0 0 20px #ffffffaa inset; */
 }
