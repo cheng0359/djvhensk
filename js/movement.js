@@ -41,19 +41,19 @@ function drawFrame(frameIndex) {
 function updateCanvasPosition(scrollPositionY) {
     let transformValue = 'translate(0%, 0%)';
     if(scrollPositionY>=300){
-        transformValue='translate(-28%,700px) scale(0.4)'
+        transformValue='translate(-24%,650px) scale(0)'
     }
     if(scrollPositionY >= 800){
         canChangeAnime=true;
     }
-    if (scrollPositionY >= 1000) {
-        transformValue = 'translate(18%,1300px)  scale(0.6)';
+    if (scrollPositionY >= 2100) {
+        transformValue = 'translate(-28%,2100px)  scale(0.3)';
     }
-    if (scrollPositionY >= 1500) {
-        transformValue = 'translate(-28%, 1790px)  scale(0.4)';
+    if (scrollPositionY >= 2600) {
+        transformValue = 'translate(20%,2590px)  scale(0.5)';
     }
-    if (scrollPositionY >= 2200) {
-        transformValue = 'translate(-28%, 2600px)  scale(0.0)';
+    if (scrollPositionY >= 2900) {
+        transformValue = 'translate(-28%, 3000px)  scale(0.3)';
     }
     
     canvas_earth.style.transform = transformValue;
