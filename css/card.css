@@ -330,7 +330,7 @@
     height: 250px;
     background-color: rgb(217, 217, 217);
     z-index: 3;
-    padding: 30px;
+    padding: 30px 10px 30px 30px;
     border-radius: 20px;
     display: flex;
     flex-wrap: space-between;
@@ -342,6 +342,6 @@
 }
 
 .menter-text {
-    padding: 20px;
+    padding: 10px 10px 10px 20px;
     flex: 2;
 }

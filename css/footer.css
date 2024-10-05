@@ -1,7 +1,7 @@
 .footer-tag {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1.05);;
 
 }
 
@@ -74,6 +74,7 @@
 
 .footlogo {
     width: 100%;
+    
 }
 .logotag {
     scale: 2;
