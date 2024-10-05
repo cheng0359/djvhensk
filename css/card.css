@@ -118,7 +118,7 @@
     border-radius: 20px;
     /* 居中 */
     align-items: center;
-    color: #2f5841;
+    color: #07243f;
     /* 阴影 */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     transition: flex 0.8s ease, background-color 0.8s ease;
@@ -138,8 +138,16 @@
 
 }
 
+@font-face {
+    font-family: Oswald;
+    src: url('../webfonts/Oswald-VariableFont_wght.ttf');
+}
+
+
 .card .card-text p {
-    font-size: 20px;
+    font-size: 30px;
+    font-family: 'Oswald';
+    font-style: italic;
 }
 
 .card .photo .photo-1 {
@@ -207,10 +215,10 @@
 }
 
 .card p {
+    padding:  0 30px;
     width: 90%;
-    text-indent: 32px;
-    font-size: 16px;
-    margin-bottom: 15px;
+    font-size: 25px;
+    margin-top: 50px;
     line-height: 30px;
     font-weight: 800;
 }
@@ -241,27 +249,32 @@
     position: absolute;
     transition: transform 1s, height 1s;
     height: 120%;
-        bottom: 0px;
+    bottom: 0px;
     right: -40px;
 }
 
 .HWY {
     bottom: 0;
 }
+
 .HCY {
     bottom: 0;
 }
+
 .LJ {
     bottom: -15px !important;
     scale: 1.05;
 }
+
 .LY {
     bottom: -5px !important;
-        scale: 1.05;
+    scale: 1.05;
 }
+
 .LKX {
     bottom: 0;
 }
+
 .LRJ {
     bottom: 0;
 }
@@ -269,28 +282,35 @@
 .SHZ {
     bottom: 0;
 }
-.YYX{
+
+.YYX {
     bottom: -3px !important;
     scale: 1.1;
 }
+
 .ZML {
     bottom: 2px !important;
     scale: 1.1;
 }
+
 .BJX {
     bottom: 0;
 }
+
 .CKX {
     bottom: -22px !important;
     scale: 1.05;
 }
+
 .MRY {
     bottom: -17px !important;
     scale: 1.05;
 }
+
 .CWB {
     bottom: -1px !important;
 }
+
 .WYM {
     bottom: 0;
 }
@@ -300,13 +320,28 @@
 .mentor_introduction {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    background: #7e7070;
+    justify-content: space-around;
+    width: 1200px;
+    margin: auto;
 }
+
 .menter {
     width: 500px;
-height: 400px;
-background-color: #000;
-z-index: 3;
-padding: 30px;
+    height: 250px;
+    background-color: rgb(217, 217, 217);
+    z-index: 3;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: space-between;
+}
+
+.menter img {
+    height: 190px;
+    flex: 1;
+}
+
+.menter-text {
+    padding: 20px;
+    flex: 2;
 }

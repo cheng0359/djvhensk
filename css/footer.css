@@ -15,39 +15,39 @@
 }
 
 #tag2 {
-    transition-delay: 0.2s;
+    transition-delay: 0.15s;
 }
 
 #tag3 {
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
 }
 
 #tag4 {
-    transition-delay: 0.4s;
+    transition-delay: 0.25s;
 }
 
 #tag5 {
-    transition-delay: 0.5s;
+    transition-delay: 0.3s;
 }
 
 #tag6 {
-    transition-delay: 0.6s;
+    transition-delay: 0.35s;
 }
 
 #tag7 {
-    transition-delay: 0.7s;
+    transition-delay: 0.4s;
 }
 
 #tag8 {
-    transition-delay: 0.8s;
+    transition-delay: 0.45s;
 }
 
 #tag9 {
-    transition-delay: 0.9s;
+    transition-delay: 0.5s;
 }
 
 #tag10 {
-    transition-delay: 1s;
+    transition-delay: 0.55s;
 }
 .footer {
     background-color: #a4d1cc;
