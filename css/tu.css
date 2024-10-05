@@ -51,7 +51,7 @@ body {
     font: 700 20px '优设标题黑';
     border: none;
     outline: none;
-    color: #07243f;
+
     display: inline-block;
     text-decoration: none;
     z-index: 3;
@@ -92,6 +92,7 @@ body {
     padding: 0px 15px !important;
     line-height: 60px !important;
     position: relative;
+        color: #07243f;
 }
 
 .dropdown-menu:hover .dropdown-content {
@@ -130,11 +131,13 @@ body {
 
 .dropdown-content {
     display: none;
+    /* background: rgba(164, 209, 204,0.3); */
     background: #a4d1cc;
     position: absolute;
     border-radius: 0 0 25px 25px;
     width: 103px;
     opacity: 0;
+        color: #07243f;
 }
 
 .dropdown-menu .dropdown-content a {

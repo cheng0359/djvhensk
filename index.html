@@ -17,7 +17,52 @@
     <script type="text/javascript" src="./extras/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="./extras/modernizr.2.5.3.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 导航栏背景色 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            /* border: 5px groove rgba(20, 195, 113, 0.288); */
+            box-sizing: content-box;
+            background: none;
+            height: 60px;
+            z-index: 9999;
+            padding: 10px;
+            margin-bottom: 1000px;
+            transition: top 0.3s;
+            transition: background-color 0.5s;
+        }
+
+
+        .navbar.scrolled1 {
+            background: #a4d1cc;
+        }
+
+        .navbar:hover {
+            background-color: #a4d1cc;
+
+        }
+
+        .navbar a {
+            color: #ffffff
+        }
+.dropa1.scrolled2,
+.dropa2.scrolled2,
+.dropa3.scrolled2,
+.dropa4.scrolled2{
+    color: #07243f;
+}
+        .dropdown-a.scrolled2 {
+            color: #07243f;
+        }
+
+        .navbar:hover a {
+            color: #07243f;
+        }
+    </style>
     <title>Document</title>
+
 </head>
 
 <body>
@@ -33,7 +78,7 @@
         <ul id="nav" class="nav">
             <li class="slide2"></li>
             <li class="dropdown-menu">
-                <a href="./index.html" class="dropdown-a">
+                <a href="./index.html" class="dropdown-a dropa1">
                     <img src="./images/home1.svg" alt="" class="icon1">
                     <img src="./images/home2.svg" alt="" class="icon_home2">
                     Home
@@ -41,7 +86,7 @@
             </li>
 
             <li class="dropdown-menu">
-                <a href="#" class="dropdown-a">
+                <a href="#" class="dropdown-a dropa2">
                     <img src="./images/pro1.svg" alt="" class="icon3">
                     <img src="./images/pro2.svg" alt="" class="icon_pro3">
                     Project
@@ -66,7 +111,7 @@
             </li>
             <li class="dropdown-menu">
 
-                <a href="./pages/notebook.html" class="dropdown-a">
+                <a href="./pages/notebook.html" class="dropdown-a dropa3">
                     <img src="./images/lab1.svg" alt="" class="icon4">
                     <img src="./images/lab2.svg" alt="" class="icon_lab4">
                     Lab Notebook
@@ -81,7 +126,7 @@
                 </div>
             </li>
             <li class="dropdown-menu">
-                <a href="./pages/member.html" class="dropdown-a">
+                <a href="./pages/member.html" class="dropdown-a dropa4">
                     <img src="./images/single_gear.gif" alt="" class="icon2" id="gif-image">
                     Team
                 </a>
@@ -135,7 +180,29 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
         });
     </script>
-
+    <!-- 首页专用 -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            const dropdownA1 = document.querySelector('.dropa1');
+            const dropdownA2 = document.querySelector('.dropa2');
+            const dropdownA3 = document.querySelector('.dropa3');
+            const dropdownA4 = document.querySelector('.dropa4');
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled1');
+                dropdownA1.classList.add('scrolled2');
+                dropdownA2.classList.add('scrolled2');
+                dropdownA3.classList.add('scrolled2');
+                dropdownA4.classList.add('scrolled2');
+            } else {
+                navbar.classList.remove('scrolled1');
+                dropdownA1.classList.remove('scrolled2');
+                dropdownA2.classList.remove('scrolled2');
+                dropdownA3.classList.remove('scrolled2');
+                dropdownA4.classList.remove('scrolled2');
+            }
+        });
+    </script>
 
 
     <!-- 加载动画 -->
@@ -171,8 +238,7 @@
                 <img class="mid" src="./images/headpic/5.svg" alt="" id="mid0">
             </div>
             <!-- 夹在头和尾之间 -->
-            <section class="second_part"
-                style="position: relative;top: 1000px;">
+            <section class="second_part" style="position: relative;top: 1000px;">
                 <!-- gif盒子没有设置高度所以初始
             高度为0，给gif图片绝对定位以使其与波浪有合适的排版 -->
                 <div class="gif_box"><img id="gif" src="./images/PBAT1.gif" alt="GIF"></div>
@@ -321,75 +387,75 @@
     </div>
 
     <!-- 波浪部分 -->
-        <div class="waves-container">
-            <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 300 60" preserveAspectRatio="none">
-                <defs>
-                    <path id="gentle-wave"
-                        d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
-                    <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
-                    <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
-                </g>
-            </svg>
-        </div>
-        </div>
-        <section class="footer">
-        
-            <div class="grid-wrapper">
-                <div class="grid-logo">
-                    <img src="images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
-                    <img src="images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
-                    <img src="images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
-                    <img src="images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
-                    <img src="images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
-                    <img src="images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
-                    <img src="images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
-                </div>
-                <!-- lianjie1-4为footer右侧四列 -->
-                <div class="lianjie1">
-                    <h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
-                </div>
-                <div class="lianjie2">
-                    <h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
-                    <h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
-                    <h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
-                    <h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
-                    <h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
-                    <h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
-                </div>
-                <div class="lianjie3">
-                    <h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
-                </div>
-                <div class="lianjie4">
-                    <h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
-                    <h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
-                </div>
-        
+    <div class="waves-container">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 300 60" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave"
+                    d="m 0 20 c 25 0 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 30 20 50 20 s 25 -20 50 -20 s 25 20 50 20 v 30 h -400 z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="1" y="0" fill="#35768a" />
+                <use xlink:href="#gentle-wave" x="3" y="10" fill="#b0cd89" />
+                <use xlink:href="#gentle-wave" x="5" y="20" fill="#a4d1cc" />
+            </g>
+        </svg>
+    </div>
+    </div>
+    <section class="footer">
+
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="images/footerpic/logo.svg" alt="" class="footlogo footer-tag logotag" id="tag1">
+                <img src="images/footerpic/NJAU.png" alt="" class="footlogo footer-tag" id="tag2">
+                <img src="images/footerpic/sky.png" alt="" class="footlogo footer-tag" id="tag3">
+                <img src="images/footerpic/诺1.png" alt="" class="footlogo footer-tag" id="tag4">
+                <img src="images/footerpic/NEB.png" alt="" class="footlogo footer-tag" id="tag5">
+                <img src="images/footerpic/genstar.png" alt="" class="footlogo footer-tag" id="tag6">
+                <img src="images/footerpic/ala.jpg" alt="" class="footlogo footer-tag" id="tag7">
             </div>
-        </section>
-        <script>
-            function isInViewport(element) {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-                );
-            }
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1 class="footer-tag" id="tag1"><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1 class="footer-tag" id="tag2"><a href="">Project</a></h1>
+                <h1 class="footer-tag" id="tag3"><a href="">Description</a></h1>
+                <h1 class="footer-tag" id="tag4"><a href="">Design</a></h1>
+                <h1 class="footer-tag" id="tag5"><a href="">Results</a></h1>
+                <h1 class="footer-tag" id="tag6"><a href="">Supplement</a></h1>
+                <h1 class="footer-tag" id="tag7"><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1 class="footer-tag" id="tag8"><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1 class="footer-tag" id="tag9"><a href="">Team</a></h1>
+                <h1 class="footer-tag" id="tag10"><a href="">Collaboration</a></h1>
+            </div>
 
-            function handleScroll() {
-                const tags = document.querySelectorAll('.footer-tag');
-                tags.forEach(tag => {
-                    if (isInViewport(tag)) {
-                        tag.classList.add('visible');
-                    }
-                });
-            }
+        </div>
+    </section>
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
 
-            window.addEventListener('scroll', handleScroll);
-        </script>
+        function handleScroll() {
+            const tags = document.querySelectorAll('.footer-tag');
+            tags.forEach(tag => {
+                if (isInViewport(tag)) {
+                    tag.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
 </body>
 <script src="./js/movement.js"></script>
 <script src="./js/position_log.js"></script>
