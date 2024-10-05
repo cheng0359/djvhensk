@@ -30,7 +30,7 @@
 }
 
 .turnjs-bookmark ul li {
-	margin-bottom: 13px;
+	margin-bottom: 10px;
 	width: 145px;
 font-size: 16px;
 }
@@ -350,12 +350,12 @@ font-size: 16px;
 }
 
 /* 修改的第9各种古位置+1+2 */
-.sj-book .p63 {
+.sj-book .p65 {
 	background-color: white;
 	background-image: url(../pics/cover4.png) !important;
 }
 
-.sj-book .p64 {
+.sj-book .p66 {
 	background-color: white;
 	background-image: url(../pics/cover5.png) !important;
 }
@@ -434,11 +434,11 @@ font-size: 16px;
 }
 
 /* 修改的56个值+1 */
-.sj-book .p63 {
+.sj-book .p65 {
 	background-position: -960px 0 !important;
 }
 
-.sj-book .p64 {
+.sj-book .p66 {
 	background-position: -1440px 0 !important;
 }
 

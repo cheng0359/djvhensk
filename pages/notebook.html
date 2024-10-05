@@ -150,19 +150,20 @@
 			<div class="turnjs-bookmark">
 				<img src="../pics/bookmark.svg" alt="">
 				<ul>
-					<li><a href="#page/10">Jul</a></li>
-					<li><a href="#page/38">week5</a></li>
-					<li><a href="#page/10">Aug</a></li>
-					<li><a href="#page/10">week1</a></li>
-					<li><a href="#page/18">week2</a></li>
-					<li><a href="#page/25">week3</a></li>
-					<li><a href="#page/30">week4</a></li>
-					<li><a href="#page/38">week5</a></li>
-					<li><a href="#page/10">Sep</a></li>
-					<li><a href="#page/18">week1</a></li>
-					<li><a href="#page/25">week2</a></li>
-					<li><a href="#page/30">week3</a></li>
-					<li><a href="#page/38">week4</a></li>
+					<li><a href="#page/7">Jul</a></li>
+					<li><a href="#page/7">week5</a></li>
+					<li><a href="#page/9">Aug</a></li>
+					<li><a href="#page/9">week1</a></li>
+					<li><a href="#page/15">week2</a></li>
+					<li><a href="#page/20">week3</a></li>
+					<li><a href="#page/26">week4</a></li>
+					<li><a href="#page/31">week5</a></li>
+					<li><a href="#page/32">Sep</a></li>
+					<li><a href="#page/32">week1</a></li>
+					<li><a href="#page/36">week2</a></li>
+					<li><a href="#page/43">week3</a></li>
+					<li><a href="#page/51">week4</a></li>
+					<li><a href="#page/60">week4</a></li>
 				</ul>
 			</div>
 			<div id="book-zoom">
@@ -182,11 +183,11 @@
 					<!-- 修改页面 -->
 
 					<!-- 修改的第一个值用于确定最后封面位置 值为内容数+1-->
-					<div class="hard fixed back-side p63">
+					<div class="hard fixed back-side p65">
 						<div class="depth"></div>
 					</div>
 					<!-- 修改的第二个值 -->
-					<div class="hard p64"></div>
+					<div class="hard p66"></div>
 				</div>
 			</div>
 			<div id="slider-bar" class="turnjs-slider">
@@ -333,7 +334,7 @@
 				gradients: true,
 				duration: 1000,
 				// 修改的第五个值，值为内容数+2
-				pages: 64,
+				pages: 66,
 				when: {
 					turning: function (e, page, view) {
 
@@ -373,10 +374,10 @@
 
 						if (page < book.turn('pages'))
 							// 修改的第三个值，值为内容数+1
-							$('.sj-book .p63').addClass('fixed');
+							$('.sj-book .p65').addClass('fixed');
 						else
 							// 修改的第四个只，+1
-							$('.sj-book .p63').removeClass('fixed');
+							$('.sj-book .p65').removeClass('fixed');
 
 						Hash.go('page/' + page).update();
 

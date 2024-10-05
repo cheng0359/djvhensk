@@ -19,12 +19,12 @@ function updateDepth(book, newPage) {
 		depthWidth = 16*Math.min(1, (pages-page)*2/pages);
 // 修改的78各值+1、+2
 	if (newPage<pages-3)
-		$('.sj-book .p63 .depth').css({
+		$('.sj-book .p65 .depth').css({
 			width: depthWidth,
 			right: 20 - depthWidth
 		});
 	else
-		$('.sj-book .p64 .depth').css({width: 0});
+		$('.sj-book .p66 .depth').css({width: 0});
 
 }
 
