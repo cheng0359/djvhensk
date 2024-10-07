@@ -1,0 +1,113 @@
+.description_container {
+    width: 1000px;
+    background-color: rgb(255, 255, 255);
+    margin: 120px auto;
+    font-family: Arial, sans-serif;
+    padding: 60px;
+    line-height: 2;
+
+}
+
+.description_container {
+    .description_img {
+        width: 100%;
+    }
+
+    p {
+        font-size: 20px;
+        text-indent: 2em;
+        margin: 1em 0;
+    }
+
+    .caption {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .design_caption {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 8px 0;
+        text-align: center;
+    }
+
+    th {
+        background-color: #a8d4a0;
+    }
+
+    caption {
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .note {
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    .separator {
+        border-top: 1px solid #ccc;
+        margin: 4px 0;
+    }
+
+    .references {
+        font-size: 0.7em;
+        vertical-align: super;
+        font-weight: 600;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2em !important;
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
+    }
+
+    .reference-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .reference-item {
+        margin-bottom: 10px;
+    }
+
+    .doi {
+        color: #0066cc;
+    }
+
+
+}
+
+.figure_note {
+    font-size: 1em;
+    color: #555;
+}
+
+.content p {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.design_caption em {
+    font-style: italic;
+}
+
+.content strong {
+    font-weight: bold;
+}
