@@ -117,12 +117,34 @@ body {
     visibility: visible;
     opacity: 1;
 }
-
+/* DNA两边的模糊盒子 */
+.DNA_box1,
+.DNA_box2 {
+    position:absolute;
+    top: 30px;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    /* Center text vertically */
+    font-size: 24px;
+    color: #333;
+    transition: filter 0.5s ease;
+    filter: blur(10px);
+    /* 初始模糊效果 */
+    margin: 20px;
+    /* 添加一些间距 */
+    z-index: 100;
+}
+.DNA_box1 {
+    left: 50px;
+}
+.DNA_box2 {
+    right: 50px;
+}
 /* 易错DNA部分 */
 .DNA_line_container {
-    width: 800px;
     height: 600px;
-    overflow: hidden;
     perspective: 1000px;
     margin: auto;
     position: relative;

@@ -71,7 +71,7 @@
     top: 6px;
     left: 347px;
     height: 50px;
-    background-color: rgb(170, 190, 255);
+    background-color: rgba(46, 72, 99, 0.4);
     z-index: 0;
     transition: all 0.3s ease;
     border-radius: 30px;
@@ -176,7 +176,7 @@
 
 .card-text-2 {
     position: absolute;
-    right: 50px;
+    right:80px;
     bottom: 50px;
     opacity: 0;
 }
@@ -345,4 +345,12 @@
 .menter-text {
     padding: 10px 10px 10px 20px;
     flex: 2;
+}
+
+.card-text-2 p {
+    color: #fff;
+font-family: 'Oswald';
+font-size: 16px;
+line-height: 16px;
+margin: 20px 0;
 }

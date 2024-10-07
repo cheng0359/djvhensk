@@ -169,9 +169,18 @@
 
     <div class="titlebox">
         <h1 class="title" id="title">Lorem ipsum dolor elit. Officia, voluptatibus!</h1>
-
     </div>
+<script>
+    const title = document.getElementById('title');
 
+    window.addEventListener('scroll', () => {
+        if (window.scrollY >= 500) {
+            title.style.position = 'static'; // 滚动到500px时变为static
+        } else {
+            title.style.position = 'fixed';  // 否则保持fixed
+        }
+    });
+</script>
     <div class="container" style="padding-top: 100px;">
         <div class="scroll_inner">
             <div class="cvsb">
@@ -276,6 +285,25 @@
                 </script>
                 <!-- 易错DNA部分 -->
                 <div class="DNA_line_container" id="box">
+                    <div class="DNA_box1" id="DNABox1">
+                        这是第一个模糊的文字
+                    </div>
+                    <div class="DNA_box2" id="DNABox2">
+                        这是第二个模糊的文字
+                    </div>
+                    
+                    <script>
+                        const DNA_box1 = document.querySelector('.DNA_box1');
+                        const DNA_box2 = document.querySelector('.DNA_box2');
+
+                        DNA_box1.addEventListener('mouseenter', () => {
+                            DNA_box1.style.filter = 'blur(0)'; // 鼠标进入时清晰
+                        });
+
+                        DNA_box2.addEventListener('mouseenter', () => {
+                            DNA_box2.style.filter = 'blur(0)'; // 鼠标进入时清晰
+                        });
+                    </script>
                     <div class="line" style="top: 20px; width: 100px; transition-delay: 0s;"></div>
                     <div class="line" style="top: 50px; width: 200px; transition-delay: 0.02s;"></div>
                     <div class="line" style="top: 80px; width: 300px; transition-delay: 0.04s;"></div>
