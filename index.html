@@ -170,17 +170,17 @@
     <div class="titlebox">
         <h1 class="title" id="title">Lorem ipsum dolor elit. Officia, voluptatibus!</h1>
     </div>
-<script>
-    const title = document.getElementById('title');
+    <script>
+        const title = document.getElementById('title');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY >= 500) {
-            title.style.position = 'static'; // 滚动到500px时变为static
-        } else {
-            title.style.position = 'fixed';  // 否则保持fixed
-        }
-    });
-</script>
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 500) {
+                title.style.position = 'static'; // 滚动到500px时变为static
+            } else {
+                title.style.position = 'fixed';  // 否则保持fixed
+            }
+        });
+    </script>
     <div class="container" style="padding-top: 100px;">
         <div class="scroll_inner">
             <div class="cvsb">
@@ -196,8 +196,25 @@
             </div>
             <!-- 夹在头和尾之间 -->
             <section class="second_part" style="position: relative;top: 1000px;">
+                <div class="WhatisPBAT" id="pbContainer">
+                    <h1>PBAT introduction</h1>
+                    Poly (butylene adipate-co-terephthalate) (PBAT), a polymer synthesized from the monomers terephthalic acid (TPA), adipic
+                    acid (AA), and 1,4-butanediol (BDO), has garnered significant attention as a biocompatible and degradable polymeric
+                    material, exhibiting considerable potential for widespread application in the realm of agricultural film technology.
+                </div>
+                <script>
+                    const pbContainer = document.getElementById('pbContainer');
+                    const pbPosition = pbContainer.offsetTop; // 获取 div 的位置
+
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY + window.innerHeight >= pbPosition) {
+                            pbContainer.classList.add('visible'); // 添加类以触发效果
+                        }
+                    });
+                </script>
                 <!-- gif盒子没有设置高度所以初始
             高度为0，给gif图片绝对定位以使其与波浪有合适的排版 -->
+        
                 <div class="gif_box"><img id="gif" src="./images/PBAT1.gif" alt="GIF"></div>
                 <!-- 当gif距离顶部有1800px时开始播放，第一个gif播放完后（4.5s）切换至第二个gif循环播放 -->
                 <script>
@@ -286,12 +303,22 @@
                 <!-- 易错DNA部分 -->
                 <div class="DNA_line_container" id="box">
                     <div class="DNA_box1" id="DNABox1">
-                        这是第一个模糊的文字
+                        <div><h1>Development of PBAT hydrolases</h1>
+                        We selected IsPETase, BsLipA, and Lipase1028 as the starting points for directed evolution and established three
+                        mutation libraries using error-prone PCR and site-directed mutagenesis. Hydrolysis zone screening method was employed to
+                        endow them with the ability to degrade PBAT.</div>
                     </div>
                     <div class="DNA_box2" id="DNABox2">
-                        这是第二个模糊的文字
+                        <div>
+                            <h1>Development of engineered Pseudomonas putida KT2440 strain</h1>
+                            
+                            The evolved PBAT hydrolases were transformed into Pseudomonas putida KT2440-tph, which had undergone adaptive laboratory
+                            evolution to acquire the ability to utilize terephthalic acid (TPA) and 1,4-butanediol (BDO) as carbon sources. This
+                            allowed the construction of a KT2440 strain with high PBAT degradation capacity and the ability to grow using its
+                            degradation products.
+                        </div>
                     </div>
-                    
+
                     <script>
                         const DNA_box1 = document.querySelector('.DNA_box1');
                         const DNA_box2 = document.querySelector('.DNA_box2');
@@ -343,16 +370,25 @@
                 </script>
             </section>
 
-            <h1 class="t1 aos-hover-zoom" data-aos="fade-up-left" data-aos-duration="1500ms">Poly (butylene adipate-co-terephthalate) (PBAT), a polymer synthesized from the monomers terephthalic acid (TPA), adipic
-            acid (AA), and 1,4-butanediol (BDO), has garnered significant attention as a biocompatible and degradable polymeric
-            material, exhibiting considerable potential for widespread application in the realm of agricultural film technology.</h1>
-            <h1 class="t2 aos-hover-zoom" data-aos="fade-up-right" data-aos-duration="1500ms">We selected IsPETase, BsLipA, and Lipase1028 as the starting points for directed evolution and established three
-            mutation libraries using error-prone PCR and site-directed mutagenesis. Hydrolysis zone screening method was employed to
-            endow them with the ability to degrade PBAT.</h1>
-            <h1 class="t3 aos-hover-zoom" data-aos="fade-up-left" data-aos-duration="1500ms">The evolved PBAT hydrolases were transformed into Pseudomonas putida KT2440-tph, which had undergone adaptive laboratory
-            evolution to acquire the ability to utilize terephthalic acid (TPA) and 1,4-butanediol (BDO) as carbon sources. This
-            allowed the construction of a KT2440 strain with high PBAT degradation capacity and the ability to grow using its
-            degradation products.</h1>
+            <h1 class="t1 aos-hover-zoom" data-aos="fade-up-left" data-aos-duration="1500ms">Poly (butylene
+                adipate-co-terephthalate) (PBAT), a polymer synthesized from the monomers terephthalic acid (TPA),
+                adipic
+                acid (AA), and 1,4-butanediol (BDO), has garnered significant attention as a biocompatible and
+                degradable polymeric
+                material, exhibiting considerable potential for widespread application in the realm of agricultural film
+                technology.</h1>
+            <h1 class="t2 aos-hover-zoom" data-aos="fade-up-right" data-aos-duration="1500ms">We selected IsPETase,
+                BsLipA, and Lipase1028 as the starting points for directed evolution and established three
+                mutation libraries using error-prone PCR and site-directed mutagenesis. Hydrolysis zone screening method
+                was employed to
+                endow them with the ability to degrade PBAT.</h1>
+            <h1 class="t3 aos-hover-zoom" data-aos="fade-up-left" data-aos-duration="1500ms">The evolved PBAT hydrolases
+                were transformed into Pseudomonas putida KT2440-tph, which had undergone adaptive laboratory
+                evolution to acquire the ability to utilize terephthalic acid (TPA) and 1,4-butanediol (BDO) as carbon
+                sources. This
+                allowed the construction of a KT2440 strain with high PBAT degradation capacity and the ability to grow
+                using its
+                degradation products.</h1>
             <img src="./images/DNA.svg" id="dnapic" class="dnapic" id="dnaanime">
 
 

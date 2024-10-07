@@ -2,7 +2,6 @@
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1.05);;
-
 }
 
 .footer-tag.visible {
@@ -94,17 +93,4 @@
 
 .grid-wrapper h1 a:hover {
     color: #214753;
-}
-
-.footer hr {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.copyright {
-    display: flex;
-    justify-content: space-around;
-    color: grey;
-    padding: 30px;
-    font-weight: 700;
 }
