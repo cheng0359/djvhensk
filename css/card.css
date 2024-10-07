@@ -18,12 +18,12 @@
     display: block;
     padding: 1rem 3rem;
     cursor: pointer;
-    background: #d4e9c2;
+    background: #a4d1cc;
     font-size: 20px;
     font-weight: bold;
     transition: background-color ease 0.4s;
     margin: 0;
-    color: #2f5841;
+    color: #222b52;
 }
 
 .tabs label:nth-of-type(1) {
@@ -71,7 +71,7 @@
     top: 6px;
     left: 347px;
     height: 50px;
-    background-color: #a9cfa8;
+    background-color: rgb(170, 190, 255);
     z-index: 0;
     transition: all 0.3s ease;
     border-radius: 30px;
