@@ -135,8 +135,18 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
         });
     </script>
+        <section class="table_of_content_container" style="height: 7570px;">
+            <div class="table_of_content">
+                <li><a href="#Pathway" style="font-size: 14px;">Pathway design of the secretion pathway in Bacillus subtilis</a></li>
+                <li><a href="#Enzyme" style="font-size: 14px;">Pathway design of a FADS-based ultra-high-throughput evolution of PBAT-degrading enzyme</a></li>
+                <li><a href="#Engineered" style="font-size: 14px;">Engineered KT2440 Strain Construction and ALE-Derived Mutant Isolation for TPA and BDO
+                Utilization</a></li>
+                <li><a href="#Reference" style="font-size: 14px;">Reference</a></li>
+            </div>
+        </section>
+
     <section class="description_container">
-        <div class="title">Pathway design of the secretion pathway in Bacillus subtilis</div>
+        <div class="title" id="Pathway">Pathway design of the secretion pathway in Bacillus subtilis</div>
         <p>We first established an efficient secretion system within Bacillus subtilis. The signal peptide AprE was
             fused to the
             N-terminus of the enzymes to enable them to be effectively secreted out of the cells via the Sec pathway
@@ -184,7 +194,7 @@
         </div>
         <div class="caption">Figure 2. Construction and screening strategies for mutation libraries.
         </div>
-        <div class="title">Pathway design of a FADS-based ultra-high-throughput evolution of PBAT-degrading enzyme</div>
+        <div class="title" id="Enzyme">Pathway design of a FADS-based ultra-high-throughput evolution of PBAT-degrading enzyme</div>
         <p>The method of screening by observing hydrolysis zones is common, straightforward, cost-effective, and simple
             to
             implement. However, its efficiency is limited a lot because of following drawbacks: (1) its throughput is
@@ -247,7 +257,7 @@
             PBAT enzyme can degrade more TPA and achieve a higher level of luminescence.
         </div>
 
-        <div class="title">Engineered KT2440 Strain Construction and ALE-Derived Mutant Isolation for TPA and BDO
+        <div class="title" id="Engineered">Engineered KT2440 Strain Construction and ALE-Derived Mutant Isolation for TPA and BDO
             Utilization</div>
         <p>To upcycle PBAT, a multifunctional P. putida KT2440 strain was engineered to secrete PET hydrolase and
             degrade PBAT
@@ -286,7 +296,7 @@
             dehydrogenase
             (tphB).
         </div>
-        <div class="title">Reference</div>
+        <div class="title" id="Reference">Reference</div>
         <ul class="reference-list">
             <li class="reference-item">
                 [1] M. Hao, W. Hui, L. Shao, C. Shi, F. Lu and H. Zhang, Improving the Ability of
@@ -341,6 +351,23 @@
             </li>
         </ul>
     </section>
+        <script>
+            document.querySelectorAll('.table_of_content a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const offset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
 <div class="waves-container">
     <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 300 60" preserveAspectRatio="none">
