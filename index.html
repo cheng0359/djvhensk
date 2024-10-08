@@ -36,7 +36,7 @@
             <li class="slide2"></li>
             <li class="dropdown-menu">
                 <a href="./index.html" class="dropdown-a dropa1">
-                    <img src="./images/home1.svg" alt="" class="icon1">
+                    <img src="./images/home1.svg" alt="" class="icon1" id="icon1">
                     <img src="./images/home2.svg" alt="" class="icon_home2">
                     Home
                 </a>
@@ -44,7 +44,7 @@
 
             <li class="dropdown-menu">
                 <a href="#" class="dropdown-a dropa2">
-                    <img src="./images/pro1.svg" alt="" class="icon3">
+                    <img src="./images/pro1.svg" alt="" class="icon3" id="icon3">
                     <img src="./images/pro2.svg" alt="" class="icon_pro3">
                     Project
                 </a>
@@ -68,7 +68,7 @@
             </li>
             <li class="dropdown-menu">
                 <a href="./pages/notebook.html" class="dropdown-a dropa3">
-                    <img src="./images/lab1.svg" alt="" class="icon4">
+                    <img src="./images/lab1.svg" alt="" class="icon4" id="icon4">
                     <img src="./images/lab2.svg" alt="" class="icon_lab4">
                     Lab Notebook
                 </a>
@@ -92,6 +92,45 @@
             </script>
         </ul>
     </section>
+    <script>
+        const icon1 = document.getElementById('icon1');
+            const icon3 = document.getElementById('icon3');
+            const icon4 = document.getElementById('icon4');
+            const gif_image = document.getElementById('gif-image');
+        const navbar = document.getElementById('navbar');
+        let isHovering = false;
+
+        function updateIcon() {
+            if (window.scrollY === 0 && !isHovering) {
+                icon1.src = './images/home1.1.svg';
+                icon3.src = './images/pro1.1.svg';
+                icon4.src = './images/pro1.1.svg';
+                gif_image.src = './images/1_00.gif';
+            } else {
+                icon1.src = './images/home1.svg';
+                icon3.src = './images/pro1.svg';
+                icon4.src = './images/lab1.svg';
+                gif_image.src = './images/single_gear.gif';
+            }
+        }
+
+        navbar.addEventListener('mouseover', () => {
+            isHovering = true;
+            updateIcon();
+        });
+
+        navbar.addEventListener('mouseleave', () => {
+            isHovering = false;
+            updateIcon();
+        });
+
+        window.addEventListener('scroll', updateIcon);
+
+        // Initial check on page load
+        window.addEventListener('load', updateIcon);
+    </script>
+
+    
     <script>
         $("#nav a").on("click", function () {
             var position = $(this).parent().position();
@@ -198,9 +237,12 @@
             <section class="second_part" style="position: relative;top: 1000px;">
                 <div class="WhatisPBAT" id="pbContainer">
                     <h1>PBAT introduction</h1>
-                    Poly (butylene adipate-co-terephthalate) (PBAT), a polymer synthesized from the monomers terephthalic acid (TPA), adipic
-                    acid (AA), and 1,4-butanediol (BDO), has garnered significant attention as a biocompatible and degradable polymeric
-                    material, exhibiting considerable potential for widespread application in the realm of agricultural film technology.
+                    Poly (butylene adipate-co-terephthalate) (PBAT), a polymer synthesized from the monomers
+                    terephthalic acid (TPA), adipic
+                    acid (AA), and 1,4-butanediol (BDO), has garnered significant attention as a biocompatible and
+                    degradable polymeric
+                    material, exhibiting considerable potential for widespread application in the realm of agricultural
+                    film technology.
                 </div>
                 <script>
                     const pbContainer = document.getElementById('pbContainer');
@@ -214,7 +256,7 @@
                 </script>
                 <!-- gif盒子没有设置高度所以初始
             高度为0，给gif图片绝对定位以使其与波浪有合适的排版 -->
-        
+
                 <div class="gif_box"><img id="gif" src="./images/PBAT1.gif" alt="GIF"></div>
                 <!-- 当gif距离顶部有1800px时开始播放，第一个gif播放完后（4.5s）切换至第二个gif循环播放 -->
                 <script>
@@ -303,18 +345,25 @@
                 <!-- 易错DNA部分 -->
                 <div class="DNA_line_container" id="box">
                     <div class="DNA_box1" id="DNABox1">
-                        <div><h1>Development of PBAT hydrolases</h1>
-                        We selected IsPETase, BsLipA, and Lipase1028 as the starting points for directed evolution and established three
-                        mutation libraries using error-prone PCR and site-directed mutagenesis. Hydrolysis zone screening method was employed to
-                        endow them with the ability to degrade PBAT.</div>
+                        <div>
+                            <h1>Development of PBAT hydrolases</h1>
+                            We selected IsPETase, BsLipA, and Lipase1028 as the starting points for directed evolution
+                            and established three
+                            mutation libraries using error-prone PCR and site-directed mutagenesis. Hydrolysis zone
+                            screening method was employed to
+                            endow them with the ability to degrade PBAT.
+                        </div>
                     </div>
                     <div class="DNA_box2" id="DNABox2">
                         <div>
                             <h1>Development of engineered Pseudomonas putida KT2440 strain</h1>
-                            
-                            The evolved PBAT hydrolases were transformed into Pseudomonas putida KT2440-tph, which had undergone adaptive laboratory
-                            evolution to acquire the ability to utilize terephthalic acid (TPA) and 1,4-butanediol (BDO) as carbon sources. This
-                            allowed the construction of a KT2440 strain with high PBAT degradation capacity and the ability to grow using its
+
+                            The evolved PBAT hydrolases were transformed into Pseudomonas putida KT2440-tph, which had
+                            undergone adaptive laboratory
+                            evolution to acquire the ability to utilize terephthalic acid (TPA) and 1,4-butanediol (BDO)
+                            as carbon sources. This
+                            allowed the construction of a KT2440 strain with high PBAT degradation capacity and the
+                            ability to grow using its
                             degradation products.
                         </div>
                     </div>
